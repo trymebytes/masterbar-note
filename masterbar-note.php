@@ -1,6 +1,8 @@
 <?php
 /**
  * Plugin name: Masterbar Note
+ * Text Domain: masterbar-note
+ * Requires at least: 4.6
  */
 add_action( 'admin_bar_menu', function( WP_Admin_Bar $wp_menu ) {
 	$wp_menu->add_node(
@@ -31,7 +33,7 @@ function master_bar_note_callback(){
     <label for="master-bar-note-field">
         <input type="text" value="<?php echo esc_attr( get_option( 'master-bar-note', 'Hello' ) ); ?>" name="master-bar-note" id="master-bar-note-field"/>
         <p class="description">
-        	This is the text you'd like to appear in the Master Bar.
+        <?php __e( 'This is the text you\'d like to appear in the Master Bar.', 'masterbar-note' ); ?>
         </p>
     </label>
     <?php
