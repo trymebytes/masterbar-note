@@ -1,6 +1,7 @@
 <?php
 /**
  * Plugin name: Masterbar Note
+ * Description: The Masterbar Note is a WordPress plugin that allows you add customizable notes to the Masterbar.
  * Author: Tosin Oguntuyi, Alex Kirk
  * Version: 1.0.0
  * Text Domain: masterbar-note
