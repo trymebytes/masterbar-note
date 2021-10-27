@@ -33,7 +33,7 @@ function master_bar_note_callback(){
     <label for="master-bar-note-field">
         <input type="text" value="<?php echo esc_attr( get_option( 'master-bar-note', 'Hello' ) ); ?>" name="master-bar-note" id="master-bar-note-field"/>
         <p class="description">
-        <?php __e( 'This is the text you\'d like to appear in the Master Bar.', 'masterbar-note' ); ?>
+        <?php _e( 'This is the text you\'d like to appear in the Master Bar.', 'masterbar-note' ); ?>
         </p>
     </label>
     <?php
