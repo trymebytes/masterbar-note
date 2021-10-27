@@ -11,7 +11,7 @@ add_action( 'admin_bar_menu', function( WP_Admin_Bar $wp_menu ) {
 	$wp_menu->add_node(
 		array(
 			'id'     => 'master-bar-note',
-			'title'  => get_option( 'master-bar-note', 'Hello' ),
+			'title'  => __( get_option( 'master-bar-note', 'Hello' ), 'masterbar-note' ),
 		)
 	);
 }, 100 );
@@ -24,7 +24,7 @@ add_action( 'admin_init', function() {
     );
     add_settings_field(
         'master-bar-note-field',    // Field ID
-        'Masterbar Note',           // Field title
+        __( 'Masterbar Note', 'masterbar-note' ),           // Field title
         'master_bar_note_callback', // Field callback function
         'general',                  // Settings page slug
     );
