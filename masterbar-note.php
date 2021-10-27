@@ -1,9 +1,12 @@
 <?php
 /**
  * Plugin name: Masterbar Note
+ * Author: Tosin Oguntuyi, Alex Kirk
+ * Version: 1.0.0
  * Text Domain: masterbar-note
  * Requires at least: 4.6
  */
+
 add_action( 'admin_bar_menu', function( WP_Admin_Bar $wp_menu ) {
 	$wp_menu->add_node(
 		array(
