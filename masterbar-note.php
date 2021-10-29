@@ -12,7 +12,7 @@ add_action( 'admin_bar_menu', function( WP_Admin_Bar $wp_menu ) {
 	$wp_menu->add_node(
 		array(
 			'id'     => 'master-bar-note',
-			'title'  => __( get_option( 'master-bar-note', 'Hello' ), 'masterbar-note' ),
+			'title'  => get_option( 'master-bar-note', __( 'Hello', 'masterbar-note' )),
 		)
 	);
 }, 100 );
@@ -35,7 +35,7 @@ add_action( 'admin_init', function() {
 function master_bar_note_callback(){
     ?>
     <label for="master-bar-note-field">
-        <input type="text" value="<?php echo esc_attr( get_option( 'master-bar-note', 'Hello' ) ); ?>" name="master-bar-note" id="master-bar-note-field"/>
+        <input type="text" value="<?php echo esc_attr( get_option( 'master-bar-note', __( 'Hello', 'masterbar-note' ) ) ); ?>" name="master-bar-note" id="master-bar-note-field"/>
         <p class="description">
         <?php _e( 'This is the text you\'d like to appear in the Master Bar.', 'masterbar-note' ); ?>
         </p>
